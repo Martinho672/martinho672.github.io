@@ -54,17 +54,17 @@ function App() {
                 <div className="infos">
                   <ul>
                     <li>
-                      Idade: <span>23</span>
+                      Idade: <spam>23</spam>
                     </li>
                     <li>
-                      Email: <span>martinho672@gmail.com</span>
+                      Email: <spam>martinho672@gmail.com</spam>
                     </li>
                     <li>
                       Faculdade:{" "}
-                      <span>
+                      <spam>
                         Ciência da Computação - Instituto Federal de Minas
                         Gerais
-                      </span>{" "}
+                      </spam>{" "}
                     </li>
                   </ul>
                 </div>
