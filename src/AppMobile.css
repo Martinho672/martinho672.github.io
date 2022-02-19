@@ -1,0 +1,191 @@
+
+
+@media only screen and (max-width :1024px) {
+    .navbar {
+        display: inline-block;
+        overflow: hidden;
+        background-color: #111111;
+        position: fixed;
+        top: 0;
+        height: 3.3rem;
+        width: 100%;
+        z-index: 5;
+    }
+    .navbar h1 {
+        margin-left: 1em;
+        font-size: 1.3rem;
+        color: #f1f1f1;
+    }
+    .toggle-btn {
+        display: block;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 5;
+    }
+    .container-1 {
+        padding-top: 25%;
+        display: block;
+        height: 90vh;
+        width: 100%;
+        user-select: none;
+    }
+    .shape {
+        margin: auto;
+        display: block;
+        height: 30vh;
+        width: 60vw;
+        flex: 2;
+    }
+    .main {
+        margin: 0 auto;
+        padding-left: 0;
+        padding-top: 5vh;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .main h1 {
+        text-align: center;
+        display: block;
+        color: #f1f1f1;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.2rem;
+    }
+    .main p {
+        text-align: center;
+        color: #818181;
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    .box {
+        width: 100%;
+        text-align: center;
+    }
+    .container-2 {
+        width: 90%;
+        padding-top: 0;
+    }
+    .outdoor {
+        width: 50%;
+        height: 30vh;
+        background-size: cover;
+    }
+    .about {
+        flex: 2;
+    }
+    .content {
+        display: block;
+    }
+    .about h1 {
+        display: block;
+        color: #f1f1f1;
+        font-weight: 500;
+        font-size: 4vh;
+        text-align: left;
+    }
+    .about p {
+        width: 95%;
+        color: #818181;
+        font-size: 0.8em;
+        font-weight: 400;
+        line-height: 1.5rem;
+        text-align: justify;
+    }
+    .about li {
+        list-style: none;
+        color: #f1f1f1;
+        font-size: 0.8em;
+    }
+    .infos {
+        display: block;
+        width: 70vw;
+        justify-content: center;
+        margin-left: -8vw;
+        margin-top: -3vh;
+        text-align: justify;
+    }
+    .container-3 {
+        width: 92%;
+        margin: 0 auto;
+    }
+    .grid-template-columns {
+        display: list-item;
+        padding-top: 10vh;
+        list-style: none;
+        color: #f1f1f1;
+        grid-template-columns: 20rem 20rem;
+    }
+    .item {
+        margin-bottom: 25px;
+        height: 30vh;
+        width: 90%;
+        background-size: 100%;
+        border: 2px solid #e7e7e7;
+        color: #f1f1f1;
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .habilidades .icones {
+        font-size: 2rem;
+    }
+    .sidenav {
+        display: none;
+        padding-left: 10vw;
+        padding-top: 25vh;
+        height: 100vh;
+        width: 100vw;
+        transition: 0.5s;
+        text-align: center;
+        opacity: 0.9;
+    }
+    .sidenav a {
+        font-size: 2rem;
+    }
+    .sidenav ul {
+        text-align: center;
+    }
+    .project-text {
+        width: 80vw;
+    }
+    .footer {
+        padding-top: 5rem;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 4rem;
+    }
+    .footer-text {
+        margin: auto;
+        text-align: center;
+        align-self: center;
+        width: 90%;
+    }
+    .footer-form {
+        margin: auto;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 150px)and (max-width: 430px) {
+    .item {
+        height: 20vh;
+    }
+}
+
+@media only screen and (min-width: 150px)and (max-width: 340px) {
+    .tags {
+        text-align: center;
+        display: block;
+    }
+    .tag {
+        width: 100%;
+    }
+}
