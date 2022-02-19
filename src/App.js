@@ -158,7 +158,7 @@ function App() {
                     <p>
                       Aplicativo desenvolvido como plataforma de acionamento de
                       cargas remotas de um circutio integrado do qual faz o uso
-                      de relés e outros dipositovos eletrônicos, sendo um
+                      de relés e outros dispositivos eletrônicos, sendo um
                       projeto de Pesquisa do IFMG
                     </p>
                   </div>
@@ -180,6 +180,9 @@ function App() {
                     servindo como um espaço de interação entre a comunidade
                     interna e externa da instituição
                   </p>
+                  <div className="tags padding">
+                    <div className="tag">WordPress</div>
+                  </div>
                 </div>
               </div>
             </div>
