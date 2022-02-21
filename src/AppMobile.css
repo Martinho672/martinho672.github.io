@@ -32,8 +32,8 @@
     .shape {
         margin: auto;
         display: block;
-        height: 30vh;
-        width: 60vw;
+        height: 250px;
+        width: 250px;
         flex: 2;
     }
     .main {

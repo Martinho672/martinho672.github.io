@@ -54,7 +54,7 @@ function App() {
                 <div className="infos">
                   <ul>
                     <li>
-                      Idade: <spam>23</spam>
+                      Idade: <spam>{new Date().getFullYear() - 1998}</spam>
                     </li>
                     <li>
                       Email: <spam>martinho672@gmail.com</spam>
@@ -136,9 +136,8 @@ function App() {
                     <div className="tag">Firebase</div>
                   </div>
                   <p className="project-text padding">
-                    Foram desenvolvidas melhorias na interface básica do
-                    aplicativo bem como a adição de notificações via firebase
-                    para os usuários.
+                  Desenvolvimento de aplicação móvel para a exibição de noticias da
+                  instituição e acesso a programa de cursos online
                   </p>
                 </div>
               </div>
@@ -181,7 +180,7 @@ function App() {
                     interna e externa da instituição
                   </p>
                   <div className="tags padding">
-                    <div className="tag">WordPress</div>
+                    <a href="http://memoria.ifmg.edu.br/" target="blank"><div className="tag link">Acesso</div></a> 
                   </div>
                 </div>
               </div>
