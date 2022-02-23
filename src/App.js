@@ -195,7 +195,7 @@ function App() {
         </div>
         <div className="footer-form">
           <div>
-            <ContactForm />
+            <ContactForm /> 
           </div>
         </div>
       </div>
