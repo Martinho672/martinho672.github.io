@@ -60,10 +60,10 @@ function App() {
                       Email: <spam>martinho672@gmail.com</spam>
                     </li>
                     <li>
-                      Faculdade:{" "}
+                      Formação:{" "}
                       <spam>
                         Ciência da Computação - Instituto Federal de Minas
-                        Gerais
+                        Gerais - Em andamento
                       </spam>{" "}
                     </li>
                   </ul>
