@@ -6,7 +6,7 @@
         position: fixed;
         top: 0;
         height: 3.3rem;
-        width: 100%;
+        width: 100%; 
         z-index: 5;
     }
     .navbar h1 {
