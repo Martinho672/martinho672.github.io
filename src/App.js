@@ -10,7 +10,7 @@ function App() {
         <section className="container-1 ">
           <div className="shape" />
           <div className="main">
-            <h1>Fernando Martinho</h1>
+            <h1>Fernando Martinho Nascimento</h1>
             <p>
               Desenvolvedor localizado em Formiga(MG) sempre em busca de novos
               desafios.
@@ -41,7 +41,7 @@ function App() {
             <div className="content ">
               <div className="about">
                 <div>
-                  <h1>Quem sou eu?</h1>
+                  <h1 className="container-title">Quem sou eu?</h1>
                 </div>
                 <p>
                   Desenvolvedor Fullstack, buscando sempre o aprendizado de
@@ -72,7 +72,7 @@ function App() {
             </div>
           </div>
           <div className="habilidades">
-            <h1>Habilidades</h1>
+            <h1 className="container-title">Habilidades</h1>
             <div className="box">
               <div className="fab fa-html5 icones">
                 <p>HTML</p>
@@ -101,7 +101,7 @@ function App() {
 
         <section className="container-3">
           <div className="projects">
-            <h1>Projetos</h1>
+            <h1 className="container-title">Projetos</h1>
             <div className="grid-template-columns" id="conteudo">
               <div className="project-container ">
                 <a>
@@ -122,10 +122,13 @@ function App() {
                     administrativo dentro do próprio aplicativo para fazer o
                     gerenciamento dos agendamentos
                   </p>
+                  <div className="tags padding">
+                    <a href="https://play.google.com/store/apps/details?id=com.nfsoft.cortai" target="blank"><div className="tag link">Acesso</div></a> 
+                  </div>
                 </div>
               </div>
 
-              <div className="project-container  ">
+              <div className="project-container">
                 <a>
                   <div className="item mais-ifmg"></div>
                 </a>
@@ -139,6 +142,9 @@ function App() {
                   Desenvolvimento de aplicação móvel para a exibição de noticias da
                   instituição e acesso a programa de cursos online
                   </p>
+                  <div className="tags padding">
+                    <a href="https://play.google.com/store/apps/details?id=com.ifmg.maisifmg" target="blank"><div className="tag link">Acesso</div></a> 
+                  </div>
                 </div>
               </div>
 

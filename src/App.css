@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
 
+:root{
+--primary-color : #5D4EBF;
+--secondary-color : #2DB089;
+--perfil-image : url(./perfil-dark.png);
+--bg-color : #08070B;
+}
 
 ::-webkit-scrollbar{
   width: 5px;
@@ -8,18 +14,18 @@
 }
 
 ::-webkit-scrollbar-track{
-  background-color: #030518 ;
+  background-color: var(--bg-color) ;
 }
 
 
 ::-webkit-scrollbar-thumb{
-  background-color: #25D6DA ;
+  background-color: var(--primary-color) ;
   border-radius: 20px;
 }
 
 
 body {
-  background: #1F1E1F;
+  background: var(--bg-color);
   font-family: 'Montserrat',sans-serif;    
 }
 
@@ -46,7 +52,7 @@ body {
   z-index: 0;
   animation: morph 8s ease-in-out infinite;
   border-radius:  60% 40% 30% 70%/60% 30% 70% 40%;
-  border: 0.5rem solid #05d9e8;
+  border: 0.5rem solid var(--primary-color);
   height: 30vh;
   transition: ease-in-out 0.5s ;
   width: 15vw;
@@ -87,6 +93,7 @@ body {
 .icones:hover{
   transition: 0.5s;
   transform: scale(1.2);
+  color: var(--secondary-color);
 }
 
 
@@ -150,7 +157,6 @@ body {
   width: 70%;
 }
 .infos span{
-  
   color: #818181;
 }
 
@@ -176,11 +182,15 @@ body {
   font-family: 'Montserrat',sans-serif;  
   font-size: 1rem;
   font-weight: 500 ;
-  color: #05d9e8;
 }
+
+
 .habilidades .box{
   padding-top: 3rem;
 }
+
+
+
 .habilidades .icones{
   margin-inline-start: 1rem;
   font-size: 4rem;
@@ -272,25 +282,23 @@ body {
 .project-container{
   text-align: justify;
   line-height: 2rem;  
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding: 1em;
   border-radius: 10px;
-  border: 1px;
   width: 95%;
-  margin: 0 auto;
+  border: 1px solid #2d2d2d; ;
+  box-shadow: 0 1px 3px (250,250,250,0.12);
+  margin: 1em auto;
+  transition-property: width
 }
 
 .project-container:hover{
-  background: #222222;
   transition: ease-in-out, 0.5s;
-  border: 1px solid #F231A5;
-
+  border: 1px solid var(--secondary-color);
 }
 
 .project-container h1{
   padding-top: 0.5rem;
   text-align: justify;
-  color: #25D6DA;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -298,6 +306,10 @@ body {
 
 .project-container p{
   font-size: 0.8rem; 
+}
+
+.container-title{
+  user-select: none;
 }
 
 .tags{
@@ -314,7 +326,8 @@ body {
   
 }
 .tag:hover{
-  background-color: #F231A5;
+  color: var(--bg-color);
+  background-color: var(--secondary-color);
   transition: ease-in-out 0.3s;
   cursor: pointer;
 }
@@ -353,7 +366,7 @@ body {
   text-align: justify;
   min-height: 300px;
   width: 30%;
-  background-color: #030518;
+  background-color: var(--primary-color);
   border-radius: 15px;
   color: white;
 }
@@ -388,13 +401,13 @@ body {
 #contact-form .button{
   
   border:none;
-  background-color: #F231A5;
+  background-color: #A68A56;
   width: 95%;
   margin-bottom: -1em;
 }
 
 #contact-form .button:hover{
-  background-color: #F09;
+  background-color: var(--secondary-color);
   transform: scale(1.02);
   transition: ease-in-out 0.3s;
 }
@@ -413,20 +426,20 @@ body {
 @keyframes morph {
   0% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background-image: url(./1.jpg);
+    background-image: var(--perfil-image);
     background-position: center;
     background-size: cover;
     
   }
   50% {
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    background-image: url(./1.jpg);
+    background-image: var(--perfil-image);
     background-position: center;
     background-size: cover;
   }
   100% {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    background-image: url(./1.jpg);
+    background-image: var(--perfil-image);
     background-position: center;
     background-size: cover;
   }
