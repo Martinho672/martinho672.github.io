@@ -108,6 +108,9 @@ body {
   justify-content: center;
   display: block;
 }
+.container-2 span{
+  color: var(--secondary-color);
+}
 
 
 .outdoor{

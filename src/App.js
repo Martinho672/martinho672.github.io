@@ -12,7 +12,7 @@ function App() {
           <div className="main">
             <h1>Fernando Martinho Nascimento</h1>
             <p>
-              Desenvolvedor localizado em Formiga(MG) sempre em busca de novos
+              Desenvolvedor Mobile localizado em Formiga(MG) sempre em busca de novos
               desafios.
             </p>
             <div className="box">
@@ -44,8 +44,8 @@ function App() {
                   <h1 className="container-title">Quem sou eu?</h1>
                 </div>
                 <p>
-                  Desenvolvedor Fullstack, buscando sempre o aprendizado de
-                  tecnologias atuais, tenho bastante interesse na área de
+                  Desenvolvedor Fullstack com foco no desenvolvimento móvel utilizando o framework <span>Flutter</span>, buscando sempre o aprendizado de
+                  tecnologias atuais, com bastante interesse na área de
                   desenvolvimento móvel. Atualmente estou cursando Ciência da
                   Computação no IFMG Campus Formiga .
                 </p>
