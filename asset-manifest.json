@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.1bff3b6a.chunk.css",
-    "main.js": "/static/js/main.ad214341.chunk.js",
-    "main.js.map": "/static/js/main.ad214341.chunk.js.map",
+    "main.js": "/static/js/main.b8673a84.chunk.js",
+    "main.js.map": "/static/js/main.b8673a84.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ee996d0f.js",
     "runtime-main.js.map": "/static/js/runtime-main.ee996d0f.js.map",
     "static/js/2.93cd7a75.chunk.js": "/static/js/2.93cd7a75.chunk.js",
@@ -14,6 +14,7 @@
     "static/js/2.93cd7a75.chunk.js.LICENSE.txt": "/static/js/2.93cd7a75.chunk.js.LICENSE.txt",
     "static/media/Centro-memoria-project.db9f67f2.png": "/static/media/Centro-memoria-project.db9f67f2.png",
     "static/media/Cortai-project.6d1d48de.png": "/static/media/Cortai-project.6d1d48de.png",
+    "static/media/Fernando-Martinho-Nascimento.40477ef9.pdf": "/static/media/Fernando-Martinho-Nascimento.40477ef9.pdf",
     "static/media/autohouse-project.05afc8d4.png": "/static/media/autohouse-project.05afc8d4.png",
     "static/media/App.css": "/static/media/perfil-dark.430266b4.png",
     "static/media/mais-ifmg-project.2cf39283.png": "/static/media/mais-ifmg-project.2cf39283.png"
@@ -22,6 +23,6 @@
     "static/js/runtime-main.ee996d0f.js",
     "static/js/2.93cd7a75.chunk.js",
     "static/css/main.1bff3b6a.chunk.css",
-    "static/js/main.ad214341.chunk.js"
+    "static/js/main.b8673a84.chunk.js"
   ]
 }
