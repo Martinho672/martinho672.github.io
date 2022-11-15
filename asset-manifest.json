@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.710858b3.chunk.css",
-    "main.js": "/static/js/main.02f98598.chunk.js",
-    "main.js.map": "/static/js/main.02f98598.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e261ef4c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e261ef4c.js.map",
-    "static/js/2.212572e0.chunk.js": "/static/js/2.212572e0.chunk.js",
-    "static/js/2.212572e0.chunk.js.map": "/static/js/2.212572e0.chunk.js.map",
-    "static/js/3.447e08e1.chunk.js": "/static/js/3.447e08e1.chunk.js",
-    "static/js/3.447e08e1.chunk.js.map": "/static/js/3.447e08e1.chunk.js.map",
+    "main.css": "/static/css/main.1bff3b6a.chunk.css",
+    "main.js": "/static/js/main.ad214341.chunk.js",
+    "main.js.map": "/static/js/main.ad214341.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ee996d0f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ee996d0f.js.map",
+    "static/js/2.93cd7a75.chunk.js": "/static/js/2.93cd7a75.chunk.js",
+    "static/js/2.93cd7a75.chunk.js.map": "/static/js/2.93cd7a75.chunk.js.map",
+    "static/js/3.0ccf6567.chunk.js": "/static/js/3.0ccf6567.chunk.js",
+    "static/js/3.0ccf6567.chunk.js.map": "/static/js/3.0ccf6567.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.710858b3.chunk.css.map": "/static/css/main.710858b3.chunk.css.map",
-    "static/js/2.212572e0.chunk.js.LICENSE.txt": "/static/js/2.212572e0.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/perfil-dark.430266b4.png"
+    "static/css/main.1bff3b6a.chunk.css.map": "/static/css/main.1bff3b6a.chunk.css.map",
+    "static/js/2.93cd7a75.chunk.js.LICENSE.txt": "/static/js/2.93cd7a75.chunk.js.LICENSE.txt",
+    "static/media/Centro-memoria-project.db9f67f2.png": "/static/media/Centro-memoria-project.db9f67f2.png",
+    "static/media/Cortai-project.6d1d48de.png": "/static/media/Cortai-project.6d1d48de.png",
+    "static/media/autohouse-project.05afc8d4.png": "/static/media/autohouse-project.05afc8d4.png",
+    "static/media/App.css": "/static/media/perfil-dark.430266b4.png",
+    "static/media/mais-ifmg-project.2cf39283.png": "/static/media/mais-ifmg-project.2cf39283.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e261ef4c.js",
-    "static/js/2.212572e0.chunk.js",
-    "static/css/main.710858b3.chunk.css",
-    "static/js/main.02f98598.chunk.js"
+    "static/js/runtime-main.ee996d0f.js",
+    "static/js/2.93cd7a75.chunk.js",
+    "static/css/main.1bff3b6a.chunk.css",
+    "static/js/main.ad214341.chunk.js"
   ]
 }
