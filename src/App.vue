@@ -1,23 +1,34 @@
 <template>
-  <div >
-    <HomePage/>
-    <AboutPage/>
+  <div id="app" class="flex flex-col min-h-screen">
+    <Navbar />
+    <transition name="fade" mode="out-in">
+      <router-view :key="$route.fullPath" />
+    </transition>
+    <FooterComponent class="mt-auto" />
   </div>
-  <Footer class=" bottom"/>
 </template>
 
 <script>
-import HomePage from './views/Home.vue' 
-import Footer from '../src/components/Footer.vue';
-import AboutPage from './views/About.vue'
-
+import FooterComponent from './components/Footer.vue';
+import Navbar from './components/Navbar.vue';
 
 export default {
   name: 'App',
   components: {
-    HomePage,
-    Footer,
-    AboutPage
+    Navbar,
+    FooterComponent
   }
 };
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0.2;
+}
+</style>

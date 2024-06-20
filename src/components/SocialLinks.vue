@@ -11,7 +11,7 @@
     </a>
   </div>
 </template>
-  
+
 <script>
 export default {
   name: 'SocialLinks',
@@ -31,7 +31,7 @@ export default {
   }
 };
 </script>
-  
+
 <style scoped>
 .icon {
   display: flex;
@@ -67,7 +67,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
   background-color: var(--background-color);
   filter: invert(0);
   border-radius: 50%;
@@ -122,4 +122,3 @@ export default {
   fill: #ffffff;
 }
 </style>
-  
