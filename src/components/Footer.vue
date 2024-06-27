@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container h-auto flex flex-col md:flex-row justify-between items-center px-4 md:px-48 py-4">
       <div class="mb-4 md:mb-0 text-center md:text-left">
-        <p class="text-sm font-bold">&copy; 2024 Fernando Nascimento. Todos os direitos reservados.</p>
+        <p class="text-sm font-light">&copy; 2024 Fernando Nascimento. Todos os direitos reservados.</p>
       </div>
       <div class="flex space-x-4">
         <SocialLinks :bgColor="'#3C3B3C'" />

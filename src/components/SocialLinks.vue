@@ -1,13 +1,21 @@
 <template>
   <div class="items-center justify-between flex gap-4 ">
-    <a href="#" class="btn btn-background-circle">
+    <a href="https://github.com/Martinho672" target="_blank" class="btn btn-background-circle">
       <img src="../assets/github.svg" alt="GitHub" class="icon  h-5">
     </a>
-    <a href="#" class="btn btn-background-circle">
+    <a href="mailto:martinho672@gmail.com" target="_blank" class="btn btn-background-circle">
       <img src="../assets/mail.svg" alt="Email" class="icon h-4">
     </a>
-    <a href="#" class="btn btn-background-circle ">
+    <a href="https://www.linkedin.com/in/fernando-martinho-nascimento-85b76a184/" target="_blank"
+      class="btn btn-background-circle ">
       <img src="../assets/linkedin.svg" alt="LinkedIn" class="icon h-4">
+    </a>
+    <a href="../../src/assets/Fernando-Martinho-Nascimento.pdf" target="_blank" class="btn btn-background-circle">
+      <svg class="icon h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 14h-8v-2h8v2zm0-4h-8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+        <text x="50%" y="75%" dominant-baseline="middle" font-size="5" fill="currentColor"></text>
+      </svg>
     </a>
   </div>
 </template>
@@ -96,29 +104,5 @@ export default {
 .btn.btn-background-circle:hover .icon {
   filter: invert(0);
   transition: 0.5s ease-in-out;
-}
-
-
-.social-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: var(--bgColor);
-}
-
-.social-link:hover .icon {
-  filter: invert(0);
-  transition: 0.5s ease-in-out;
-}
-
-.social-link:hover {
-  background-color: #ffffff;
-}
-
-.social-link:hover .icon path {
-  fill: #ffffff;
 }
 </style>

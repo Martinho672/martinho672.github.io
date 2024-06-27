@@ -1,10 +1,11 @@
 <template>
   <div id="app" class="flex flex-col min-h-screen">
-    <Navbar />
+    <Navbar v-if="showHeaderFooter" />
     <transition name="fade" mode="out-in">
       <router-view :key="$route.fullPath" />
     </transition>
-    <FooterComponent class="mt-auto" />
+
+    <FooterComponent v-if="showHeaderFooter" class="mt-auto" />
   </div>
 </template>
 
@@ -17,6 +18,12 @@ export default {
   components: {
     Navbar,
     FooterComponent
+  },
+  computed: {
+    showHeaderFooter() {
+      // Verifica se a rota atual não é a rota de detalhes do projeto
+      return this.$route.name !== 'ProjectDetails';
+    }
   }
 };
 </script>

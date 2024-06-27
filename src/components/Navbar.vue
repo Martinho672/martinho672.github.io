@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <nav class="principal navbar-content p-4">
+    <nav class="principal navbar-content p-4" :class="{ 'slide-in': isMounted }">
       <div class="container mx-auto py-2 flex flex-row items-center justify-between md:items-start">
         <button @click="toggleMenu" class="block md:hidden text-white hamburguer">
           <svg class="w-4 h-4 items-center" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -11,20 +11,20 @@
           class="md:flex-row mt-2 md:mt-0">
           <li class="mr-6">
             <router-link to="/"
-              class="font-bold text-white transition-colors duration-300 ease-in-out hover:text-gray-300 text-base">Home</router-link>
+              class="font-medium text-white transition-colors duration-300 ease-in-out hover:text-gray-300 text-base">Home</router-link>
           </li>
           <li class="mr-6">
             <a href="#projects" @click.prevent="scrollToSection('projects')"
-              class="font-bold text-gray-300 transition-colors duration-300 ease-in-out hover:text-white text-base">
+              class="font-medium text-gray-300 transition-colors duration-300 ease-in-out hover:text-white text-base">
               Projetos</a>
           </li>
           <li class="mr-6">
             <a href="#about" @click.prevent="scrollToSection('about')"
-              class="font-bold text-gray-300 transition-colors duration-300 ease-in-out hover:text-white text-base">Sobre</a>
+              class="font-medium text-gray-300 transition-colors duration-300 ease-in-out hover:text-white text-base">Sobre</a>
           </li>
           <li class="mr-6">
             <router-link to="/guestbook"
-              class="font-bold text-gray-300 transition-colors duration-300 ease-in-out hover:text-white text-base">Guestbook</router-link>
+              class="font-medium text-gray-300 transition-colors duration-300 ease-in-out hover:text-white text-base">Guestbook</router-link>
           </li>
         </ul>
         <div>
@@ -45,7 +45,8 @@ export default {
   data() {
     return {
       button_active_state: false,
-      menuOpen: false
+      menuOpen: false,
+      isMounted: false
     };
   },
   methods: {
@@ -58,6 +59,11 @@ export default {
         section.scrollIntoView({ behavior: 'smooth' });
       }
     }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isMounted = true;
+    }, 200);
   }
 };
 </script>
@@ -91,6 +97,15 @@ export default {
 
 .navbar-content {
   background-color: #2c2c2c;
+  transition: transform 0.7s ease-out;
+  /* Transição suave para a animação */
+  transform: translateY(-100%);
+  /* Inicia fora da tela */
+}
+
+.navbar-content.slide-in {
+  transform: translateY(0);
+  /* Move para a posição final */
 }
 
 .linha {
@@ -105,6 +120,7 @@ export default {
 @media (max-width: 768px) {
   .container {
     flex-direction: row;
+
   }
 
   .hamburguer {

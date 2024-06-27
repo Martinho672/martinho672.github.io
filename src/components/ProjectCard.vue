@@ -4,13 +4,13 @@
             :class="['card', { 'is-growing': isGrowing }]" class="p-4 flex items-center 
             justify-center h-80 w-50 transition-all 
             duration-500 ease-in-out cursor-pointer">
-            <img :src="imageUrl" alt="Card Image" :class="imageClass">
+            <img v-if="imageUrl" :src="imageUrl" alt="Card Image" :class="imageClass" @error="handleImageError">
+            <span v-if="!imageUrl" class="font-bold text-2xl text-white">{{ title }}</span>
         </div>
     </router-link>
 </template>
 
 <script>
-
 export default {
     props: {
         id: {
@@ -36,7 +36,8 @@ export default {
     },
     data() {
         return {
-            isGrowing: false
+            isGrowing: false,
+            imageLoadError: false
         };
     },
     computed: {
@@ -50,7 +51,9 @@ export default {
             setTimeout(() => {
                 this.isGrowing = false;
             }, 1000);
-
+        },
+        handleImageError() {
+            this.imageLoadError = true;
         }
     }
 };
