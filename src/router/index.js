@@ -15,13 +15,15 @@ const routes = [
     {
         path: '/project/:id',
         name: 'ProjectDetails',
+        displayName: 'Project Details',
         component: ProjectDetails,
         props: true
     },
     {
         path: '/guestbook',
         name: 'Guestbook',
-        component: () => Guestbook
+        displayName: 'Guestbook',
+        component: Guestbook
     }
 ];
 

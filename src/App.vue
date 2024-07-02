@@ -1,10 +1,11 @@
 <template>
   <div id="app" class="flex flex-col min-h-screen">
     <Navbar v-if="showHeaderFooter" />
-    <transition name="fade" mode="out-in">
-      <router-view :key="$route.fullPath" />
-    </transition>
-
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.fullPath" />
+      </transition>
+    </router-view>
     <FooterComponent v-if="showHeaderFooter" class="mt-auto" />
   </div>
 </template>
