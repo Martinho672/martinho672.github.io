@@ -12,21 +12,25 @@
                     </a>
                 </router-link>
             </div>
-            <div class="min-h-screen mb-0 pb-0 p-10 grid md:grid-cols-2 justify-center items-center ">
-                <div class=" flex flex-col justify-center items-center md:items-start ">
-                    <img v-if="project.imageUrl" :src="project.imageUrl" alt="Project Image"
-                        class="mt-4 justify-between imagem h-2/5  m-3">
+            <div class="min-h-screen pb-0 p-10 grid md:grid-cols-2 justify-center items-center">
+                <div class=" flex flex-col justify-center text-center md:text-start items-center md:items-start ">
+                    <a :href="project.link" target="_blank">
+                        <img v-if="project.imageUrl" :src="project.imageUrl" alt="Project Image"
+                            class="mt-4 justify-between imagem h-2/5  m-3">
+                    </a>
+
                     <span v-if="!project.imageUrl"
                         class="font-light text-5xl text-white text-center justify-between mb-10">{{
                             project.title }}</span>
                     <div class="ml-4">
                         <h2 class="text-md font-lighter ">Tecnologias utilizadas:</h2>
-                        <div class="flex space-x-4 mt-4">
-                            <SocialLinks />
+                        <div class="flex flex-wrap gap-1">
+                            <span v-for="(stack, index) in project.stacks" :key="index"
+                                class="stack-name text-white px-2 py-1 rounded">{{ stack }}</span>
                         </div>
                     </div>
                 </div>
-                <div class="min-h-screen-2 pt-28 p-20 align-end justify-between">
+                <div class="min-h-screen-2 pt-28 p-20 align-end justify-between text-justify">
                     <p class=" break-words">{{ project.description }}</p>
                 </div>
             </div>
@@ -56,6 +60,12 @@ export default {
 };
 </script>
 <style scoped>
+.stack-name {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 300;
+}
+
 .btn {
     display: flex;
     justify-content: center;
