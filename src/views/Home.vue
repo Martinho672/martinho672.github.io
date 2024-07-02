@@ -7,6 +7,7 @@
             <div class="container-texto md:w-3/4 order-2 md:order-1 text-start">
               <h1 class="text-2xl md:text-4xl font-medium festa-top" :class="{ 'slide-in': isMounted }">
                 Fernando
+                Martinho
                 Nascimento
               </h1>
               <p class="text-sm  festa-top " :class="{ 'slide-in': isMounted }">Desenvolvedor Frontend.</p>

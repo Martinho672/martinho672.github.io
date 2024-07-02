@@ -1,28 +1,23 @@
 import isobloco from './assets/isobloco.png';
 import academyAbroad from './assets/academy-abroad.png';
+import chcjr from './assets/images/chcjr.jpg';
 
 export const experiences = [
     {
-        title: "Estágio - Desenvolvedor Mobile,",
+        title: "Estágio - Desenvolvedor Frontend/Mobile,",
         date: "2023",
-        description: "Prefiro contar uma história real, vou contar a minha, em busca de criar novos projetos durante a pandemia desenvolvi um aplicativo para o agendamento de horários em barbearias e salões de beleza.",
+        description: "Trabalhei no desenvolvimento de uma plataforma de inteligência operacional e um aplicativo para chão de fábrica, utilizando Flutter, Laravel e SQL, para otimizar processos industriais e melhorar a eficiência operacional.",
         image: isobloco
-    },
-    {
-        title: "Estágio - Dev Frontend,",
-        date: "2022",
-        description: "Prefiro contar uma história real, vou contar a minha, em busca de criar novos projetos durante a pandemia desenvolvi um aplicativo para o agendamento de horários em barbearias e salões de beleza.",
-        image: academyAbroad
     },
     {
         title: "Acessor de Projetos - ChcJr Multicursos,",
         date: "2018 - 2020",
-        description: "Prefiro contar uma história real, vou contar a minha, em busca de criar novos projetos durante a pandemia desenvolvi um aplicativo para o agendamento de horários em barbearias e salões de beleza.",
-        image: isobloco
+        description: "Contribuí para diversos projetos educacionais, desenvolvendo habilidades em gestão de projetos e coordenação de atividades, focando em soluções tecnológicas para ambientes de aprendizado.",
+        image: chcjr
     },
     {
-        title: "Estágio - Dev Frontend, 2020,",
-        description: "Prefiro contar uma história real, vou contar a minha, em busca de criar novos projetos durante a pandemia desenvolvi um aplicativo para o agendamento de horários em barbearias e salões de beleza.",
+        title: "Estágio(Voluntariado) - Dev Frontend, 2020,",
+        description: "Criei dashboards de gerenciamento de dados em React para parcerias B2B, aprimorando minha capacidade de desenvolver interfaces de usuário eficientes e responsivas, aplicando melhores práticas de desenvolvimento front-end.",
         image: academyAbroad
     }
 

@@ -9,27 +9,41 @@
                     <p class="ml-2 text-sm font-light ">Assine com Github</p>
                 </button>
             </div>
-            <div v-if="user" class="mt-6 flex items-center">
-                <p class="pequeninas font-mono text-sm">{{ user.displayName }}:</p>
-                <p class="ml-2 text-sm">{{ userMessage }}</p>
-            </div>
 
             <!-- Formulário para enviar mensagem -->
-            <form @submit.prevent="sendMessage" v-if="user" class="mt-4">
+            <form @submit.prevent="sendMessage" v-if="user && !messageSent" class="mt-4">
                 <textarea v-model="message" rows="3"
                     class="w-full px-3 py-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-indigo-500 sm:text-sm"
                     placeholder="Digite sua mensagem..." required></textarea>
                 <button type="submit"
-                    class="mt-2 inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    class="mt-2 inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-yellow-600 ">
                     Enviar Mensagem
                 </button>
             </form>
+
+            <!-- Exibir mensagens -->
+            <div class="mt-6" v-if="messages.length > 0">
+                <h3 class="text-xl font-semibold">Mensagens:</h3>
+                <div v-for="msg in messages" :key="msg.id" class="mt-6 flex items-center">
+                    <p class="pequeninas font-mono text-sm">{{ msg.userName }}:</p>
+                    <p class="ml-2 text-sm">{{ msg.message }}</p>
+                </div>
+            </div>
+
+            <div class="mt-6" v-if="messages.length <= 0">
+                <h6 class="md:text-xl pequeninas font-light ">Parece que ninguém deixou uma mensagem ainda 😓, que tal
+                    ser o
+                    primeiro
+                    ?
+                </h6>
+            </div>
+
         </div>
     </div>
 </template>
 
 <script>
-import { auth, provider, signInWithPopup, db } from '../../firebase';
+import { auth, provider, signInWithPopup, db, collection, setDoc, doc, getDocs, orderBy, query } from '../../firebase';
 
 export default {
     name: 'Guestbook',
@@ -38,6 +52,8 @@ export default {
             user: null,
             message: '',
             userMessage: '',
+            messages: [], // Array para armazenar as mensagens
+            messageSent: false, // Controla a visibilidade do formulário
         };
     },
     methods: {
@@ -50,22 +66,36 @@ export default {
                     console.error("Erro ao fazer login com GitHub: ", error);
                 });
         },
-        sendMessage() {
+        async sendMessage() {
             if (this.message.trim() === '') return;
 
-            db.collection('guestbookMessages').add({
-                userId: this.user.uid,
-                userName: this.user.displayName,
-                message: this.message,
-                timestamp: new Date(),
-            })
-                .then(() => {
-                    this.userMessage = this.message; // Atualiza a mensagem na tela
-                    this.message = ''; // Limpa o campo de mensagem após enviar
-                })
-                .catch((error) => {
-                    console.error('Erro ao enviar mensagem:', error);
-                });
+            try {
+                const userDocRef = doc(db, 'guestbookMessages', this.user.uid);
+                await setDoc(userDocRef, {
+                    userId: this.user.uid,
+                    userName: this.user.displayName,
+                    message: this.message,
+                    timestamp: new Date(),
+                }, { merge: true });
+                this.userMessage = this.message; // Atualiza a mensagem na tela
+                this.message = ''; // Limpa o campo de mensagem após enviar
+                this.messageSent = true; // Oculta o formulário após o envio
+                this.fetchMessages(); // Recarrega as mensagens após enviar
+            } catch (error) {
+                console.error('Erro ao enviar mensagem:', error);
+            }
+        },
+        async fetchMessages() {
+            try {
+                const q = query(collection(db, 'guestbookMessages'), orderBy('timestamp', 'desc'));
+                const querySnapshot = await getDocs(q);
+                this.messages = querySnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data(),
+                }));
+            } catch (error) {
+                console.error('Erro ao carregar mensagens:', error);
+            }
         },
     },
     mounted() {
@@ -83,6 +113,7 @@ export default {
         );
 
         observer.observe(this.$refs.abracadabrah);
+        this.fetchMessages(); // Carrega as mensagens quando o componente é montado
     },
 };
 </script>

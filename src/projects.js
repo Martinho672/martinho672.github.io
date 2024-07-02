@@ -21,14 +21,15 @@ export const projects = [
         title: '+IFMG',
         imageUrl: ifmg,
         backgroundColor: '#1C98ED',
-        backgroundHeight: 'h-8'
+        backgroundHeight: 'h-8',
+        description: "Desenvolvi uma aplicação móvel para exibição de notícias da instituição e acesso a programas de cursos online, utilizando Dart/Flutter e Google Firebase, integrando recursos de autenticação e banco de dados em tempo real."
     },
     {
         title: 'Centro de Memória',
         imageUrl: cdm,
         backgroundColor: '#242018',
         backgroundHeight: 'h-16',
-        description: "Site desenvolvido para o Centro de Memória do IFMG, utilizando Wordpress como principal ferramenta."
+        description: "Desenvolvi um site focado em apresentar a história da Instituição IFMG, utilizando Wordpress para integrar conteúdos em vídeo, imagens e texto, oferecendo uma plataforma rica e interativa para os visitantes."
     }
 
 ];
