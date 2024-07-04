@@ -73,7 +73,7 @@ export default {
                 const userDocRef = doc(db, 'guestbookMessages', this.user.uid);
                 await setDoc(userDocRef, {
                     userId: this.user.uid,
-                    userName: this.user.displayName,
+                    userName: this.user.login,
                     message: this.message,
                     timestamp: new Date(),
                 }, { merge: true });

@@ -10,7 +10,7 @@
       class="btn btn-background-circle ">
       <img src="../assets/linkedin.svg" alt="LinkedIn" class="icon h-4">
     </a>
-    <a href="../../src/assets/Fernando-Martinho-Nascimento.pdf" target="_blank" class="btn btn-background-circle">
+    <a href="../../assets/Fernando-Martinho-Nascimento.pdf" target="_blank" class="btn btn-background-circle">
       <svg class="icon h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path
           d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 14h-8v-2h8v2zm0-4h-8v-2h8v2zm-3-5V3.5L18.5 9H13z" />

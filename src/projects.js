@@ -1,4 +1,4 @@
-import ifmg from './assets/images/projects/+ifmg.png';
+import ifmg from './assets/images/projects/mais-ifmg.png';
 import cortai from './assets/images/projects/cortai-logo.png';
 import cdm from './assets/images/projects/cdm-logo.png';
 
